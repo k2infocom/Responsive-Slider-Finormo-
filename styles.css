@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    list-style: none;
+    text-decoration: none;
+
+    font-family: 'Poppins';
+}
+
+:root{
+    --prime-color:#E10419;
+    --white-color:#fff;
+    --black-color:#000;
+}
+
+body {
+    background: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero_container {
+    background-color: rgba(0, 0, 0, 0.647);
+    width: 100%;
+    height: 80vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    height: 120px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav .logo a {
+    font-size: 2.5rem;
+    color: var(--white-color);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+nav .icon_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons{
+    display: flex;
+    gap: 30px;
+}
+
+.icons i{
+    color: var(--white-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.icons i:hover{
+    color:var(--prime-color);
+}
+
+
+.contact_det{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.contact_det i{
+    font-size: 2rem;
+    color: var(--prime-color);
+    background-color: var(--white-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.contact_det .contact_info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--white-color);
+}
+
+.contact_det .contact_info p{
+    font-weight: 400;
+}
+
+.contact_det .contact_info h2{
+    font-weight: 500;
+}
+
+
+
+/* SLIDER  */
+
+.swiper_slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65vh;
+}
+.mySwiper{
+    width: 60%;
+}
+
+.card{
+    width: 100%;
+    /* height: 600px; */
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 5%;
+    position: relative;
+}
+
+.sale_text{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--prime-color);
+    color: var(--white-color);
+    position: absolute;
+    top: 7%;
+    left: 40%;
+    animation:  glowEffect 1s infinite forwards;
+}
+.card_content h2{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 20px 0;
+    color: var(--prime-color);
+}
+.card_content h1{
+    font-size: 5rem;
+    line-height: 5.2rem;
+    color: var(--white-color);
+}
+.card_content p{
+    color: var(--white-color);
+    margin-top: 20px;
+    font-size: 1.2rem;
+    width: 50%;
+}
+
+.card_content button{
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 50px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--prime-color);
+    cursor: pointer;
+    transition: .5s;
+}
+.card_content button:hover{
+    transform: translateY(-10px);
+}
+
+.cord_btns{
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 85%;
+    right: 5%;
+    display: none;
+}
+
+.cord_btns button{
+    width: 230px;
+    height: 45px;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    border: none;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    cursor: pointer;
+    transition: .5s;
+}
+.cord_btns button:hover{
+    background-color: var(--prime-color);
+    color: var(--white-color);
+}
+
+.card1{
+    background: url(images/slide1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card2{
+    background: url(images/slide2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.card3{
+    background: url(images/slide3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* Swiper Slider left right button  */
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    display: none !important;
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+    display: none !important;
+}
+
+.arrows{
+    font-size: 2rem;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    left: 85% !important;
+    width: 80px !important;
+    height:80px !important;
+    border-radius: 100%;
+    color: var(--white-color) !important;
+    border: 1px solid var(--white-color);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 11% !important;
+    width: 80px !important;
+    height:80px !important;
+    border-radius: 100%;
+    color: var(--white-color) !important;
+    border: 1px solid var(--white-color);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+/* ANIMATION  */
+
+@keyframes glowEffect {
+    0%{
+      box-shadow: 0 0 0px var(--white-color);
+    }
+    100%{
+        box-shadow: 0 0 10px #cccccc;
+
+    }
+}
+
+footer {
+    background: url(images/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 20vh;
+    color: var(--white-color);
+}
+
+.footer_links{
+    width: 100%;
+    height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20%;
+}
+.footer_content{
+    display: flex;
+}
+
+.footer_link{
+    width: 50%;
+}
+.footer_link h2{
+    width: 50%;
+}
+
+.video_play {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.video_play img:nth-child(1){
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.video_play i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+    background-color: #FFA200;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.footer_link p{
+    font-size: 1.2rem;
+}
+
+
+
+.brands{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.brands img{
+    width: 100px;
+    height: 30px;
+    object-fit: contain;  
+}
+
+
+/* MQ  */
+
+@media (max-width:1500px) {
+    .sale_text{
+        left: 45%;
+    }
+}
+
+@media (max-width:1400px) {
+    footer{
+        height: 100%;
+        padding: 2% 0;
+    }
+    .footer_links{
+        flex-direction: column;
+    }
+    .brands{
+        place-content: center;
+        place-items: center;
+        margin-top: 20px;
+    }
+    .footer_link{
+        place-content: center;
+        place-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width:1300px) {
+    .card{
+        height: 500px;
+    }
+    .card_content h1{
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width:1200px) {
+    .card_content h1{
+        font-size: 3rem;
+    }
+    .card_content p{
+        font-size: 1.2rem;
+    }
+    .card_content button{
+        margin-top: 25px;
+    }
+}
+
+@media (max-width:1000px) {
+    .card_content h2{
+        margin: 10px 0;
+    }
+    .card_content h1{
+        line-height: 2rem;
+        font-size: 2rem;
+    }
+
+    .card_content{
+        margin-top: 50px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+        left: 5% !important;
+    }
+    .footer_links{
+        padding: 0 12%;
+        justify-content: center;
+        align-items: center;
+    } 
+}
+
+@media (max-width:768px) {
+    .icons{
+        display: none;
+    }
+    .card_content p{
+        font-size: 1rem;
+    }
+}
